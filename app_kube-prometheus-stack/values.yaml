@@ -1,6 +1,8 @@
 ---
 kube-prometheus-stack:
   grafana:
+    downloadDashboardsImage:
+      tag: 7.70.0
     dashboardProviders:
       dashboardproviders.yaml:
         apiVersion: 1
