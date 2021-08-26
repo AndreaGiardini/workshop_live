@@ -2,7 +2,8 @@
 kube-prometheus-stack:
   grafana:
     downloadDashboardsImage:
-      tag: busybox:stable
+      repository: busybox
+      tag: stable
     dashboardProviders:
       dashboardproviders.yaml:
         apiVersion: 1
