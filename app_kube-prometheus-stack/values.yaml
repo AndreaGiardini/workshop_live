@@ -1,37 +1,35 @@
 ---
 kube-prometheus-stack:
-  prometheus:
-    additionalServiceMonitors:  # https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/
-      - name: argocd-metrics
-        selector:
-          matchLabels:
-            app.kubernetes.io/name: argocd-metrics
-        endpoints:
-          - port: metrics
-        namespaceSelector:
-          matchNames:
-            - argocd
-      - name: argocd-server-metrics
-        selector:
-          matchLabels:
-            app.kubernetes.io/name: argocd-server-metrics
-        endpoints:
-          - port: metrics
-        namespaceSelector:
-          matchNames:
-            - argocd
-      - name: argocd-repo-server-metrics
-        selector:
-          matchLabels:
-            app.kubernetes.io/name: argocd-repo-server
-        endpoints:
-          - port: metrics
-        namespaceSelector:
-          matchNames:
-            - argocd
+    #  prometheus:
+    #    additionalServiceMonitors:  # https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics/
+    #      - name: argocd-metrics
+    #        selector:
+    #          matchLabels:
+    #            app.kubernetes.io/name: argocd-metrics
+    #        endpoints:
+    #          - port: metrics
+    #        namespaceSelector:
+    #          matchNames:
+    #            - argocd
+    #      - name: argocd-server-metrics
+    #        selector:
+    #          matchLabels:
+    #            app.kubernetes.io/name: argocd-server-metrics
+    #        endpoints:
+    #          - port: metrics
+    #        namespaceSelector:
+    #          matchNames:
+    #            - argocd
+    #      - name: argocd-repo-server-metrics
+    #        selector:
+    #          matchLabels:
+    #            app.kubernetes.io/name: argocd-repo-server
+    #        endpoints:
+    #          - port: metrics
+    #        namespaceSelector:
+    #          matchNames:
+    #            - argocd
   grafana:
-      #    downloadDashboardsImage:
-      #      tag: 7.78.0
     dashboardProviders:
       dashboardproviders.yaml:
         apiVersion: 1
