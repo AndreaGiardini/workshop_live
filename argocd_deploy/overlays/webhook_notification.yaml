@@ -6,14 +6,14 @@ metadata:
 data:
   context: |
     myUsername: "Jane Doe" # ADD HERE YOUR USERNAME
-  service.webhook.discord: |
-    url: "" # ADD HERE YOUR URL
+  service.webhook.webhook-site: |
+    url: "https://webhook.site/0c9b82e7-d5e8-4583-80ac-b26ef6e62c7e" # ADD HERE YOUR URL
     headers:
     - name: Content-Type
       value: application/json
   template.app-sync-succeeded: |
     webhook:
-      discord:
+      webhook-site:
         method: POST
         body: |
           {
